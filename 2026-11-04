@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11/4. 2026 の整理</title>
+  <style>
+    body {
+      max-width: 760px;
+      margin: 70px auto;
+      padding: 0 24px;
+      font-family: Georgia, "Noto Serif JP", serif;
+      line-height: 1.9;
+      color: #333;
+      background: #fafafa;
+    }
+    h1, h2 {
+      font-weight: normal;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 1.35em;
+      margin-top: 48px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+    }
+    .date {
+      color: #888;
+      font-size: 0.9em;
+    }
+    .note {
+      margin: 28px 0;
+      padding-left: 18px;
+      border-left: 2px solid #bbb;
+    }
+    a {
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<a href="index.html">← projectTractatus</a>
+
+<p class="date">November 4, 2026</p>
+<h1>11/4. 2026 の整理</h1>
+
+<p>
+今日は Non-Aristotelian Logic に関するこれまでの議論を振り返り、
+特に Turing Machine と命題の分解について考えた。
+</p>
+
+<h2>1. A Priori と基底の相対性</h2>
+
+<p>
+群論の実験では、単位元の存在、結合律、逆元の存在という
+3つの公理を基底として定めた。
+</p>
+
+<p>
+しかし、この基底は絶対的なものではない。
+今回の実験において、わたしたちが恣意的に設定したものである。
+</p>
+
+<p>
+同様に、a priori system も人間にとっては絶対的に見えるかもしれないが、
+Non-Aristotelian Logic の立場では相対的に設定されるものである。
+a priori は人間にとっての分解不可能対象であって、
+絶対的な真理の根拠ではない。
+</p>
+
+<h2>2. Machine と素因数分解</h2>
+
+<p>
+自然数を素因数分解するとき、素数は分解の停止点となる。
+このとき、素数であることを定義する論理式として
+Gödel の Prime(x) に注目した。
+</p>
+
+<p>
+今回の構想では、Prime(x) を基底の定義として参照する。
+重要なのは、素数判定と素因数分解が異なる操作であること、
+そして基底の定義と分解規則を区別することである。
+</p>
+
+<p>
+群論の命題についても、基底を定めたうえで、
+入力された命題を基底に向かって分解する Machine を考える。
+</p>
+
+<h2>3. 群論による実験</h2>
+
+<p>入力する命題：</p>
+
+<p>
+(a<sup>-1</sup>)<sup>-1</sup> = a
+</p>
+
+<p>分解の例：</p>
+
+<p>
+(a<sup>-1</sup>)<sup>-1</sup>
+= (a<sup>-1</sup>)<sup>-1</sup> · e
+</p>
+
+<p>
+= (a<sup>-1</sup>)<sup>-1</sup> · (a<sup>-1</sup> · a)
+</p>
+
+<p>
+このように、群の公理を用いて対象を段階的に変形する。
+ただし、どのような分解規則を採用するか、
+また各経路がどのように基底へ到達するかは、
+今後さらに定式化する必要がある。
+</p>
+
+<h2>4. 分解経路と判定</h2>
+
+<p>
+Machine の判定とは、基底まで到達する分解経路が存在するかどうか、
+という問題として考えられる。
+</p>
+
+<p>
+分解経路が存在すれば YES、存在しなければ NO を返す。
+ただし、経路が見つからないことと、経路が存在しないことは異なる。
+有限時間で判定するためには、停止性についても考える必要がある。
+</p>
+
+<p>
+また、分解規則の一意性は本質的ではない。
+120 を素因数分解するとき、最初に 2 で割るか 3 で割るかは、
+最終的な素因数分解に影響しないからである。
+</p>
+
+<h2>5. 今後の問題</h2>
+
+<ul>
+  <li>命題に対する分解規則をどのように定義するか。</li>
+  <li>分解経路の存在性をどのように判定するか。</li>
+  <li>Machine の停止性をどのように保証するか。</li>
+  <li>既存の自動定理証明や計算可能性理論とどう関係するか。</li>
+  <li>基底を変更したとき、分解構造はどう変化するか。</li>
+</ul>
+
+<div class="note">
+  基底は絶対的な真理の根拠ではなく、
+  ある体系において相対的に定められる分解の停止点である。
+</div>
+
+<p>
+This is an ongoing investigation.
+</p>
+
+</body>
+</html>
